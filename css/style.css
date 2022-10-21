@@ -16,6 +16,7 @@ Grey dark 3: #999
 
 */
 :root {
+  --color-white: #fff;
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
   --color-primary-dark: #ba265d;
@@ -26,6 +27,7 @@ Grey dark 3: #999
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --color-shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -53,6 +55,55 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+}
+
+/* Logo */
+.logo {
+  height: 3.25rem;
+}
+
+/* Search box*/
+.search__icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* User nav */
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.user-nav__user_photo {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 50%;
+}
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--color-shadow-dark);
+  min-height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  background-color: var(--color-white);
+  border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 1 18%;
+}
+
+.hotel-view {
+  background-color: var(--color-white);
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
