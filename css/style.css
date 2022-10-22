@@ -157,9 +157,51 @@ body {
   margin-right: 1rem;
 }
 
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+}
+.side-nav__item {
+  position: relative;
+}
+.side-nav__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0.3rem;
+  transform: scaleY(0);
+  background-color: var(--color-primary);
+  transition: all 0.2s, width 0.4s cubic-bezier(0.67, -0.38, 0.12, 1.04) 0.2s, background-color 0.2s;
+}
+.side-nav__item:hover::before, .side-nav__item--active::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.side-nav__item:active::before {
+  background-color: var(--color-primary-light);
+}
+.side-nav__link:link, .side-nav__link:visited {
+  color: var(--color-grey-light-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+}
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
+  margin-right: 2rem;
+  fill: currentColor;
 }
 
 .legal {
